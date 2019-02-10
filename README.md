@@ -1,6 +1,10 @@
 # Quizzer
 
-This project is a portfolio-showcase for a react project, that uses shared components between the web-version (this repo) and the app-version (built in react-native).
+This project is a portfolio-showcase for a react project.
+The main points to note here are:
+- It uses shared components between the web-version (this repo) and the app-version (built in react-native). These components are in the quizzer-shared package.
+- I set up a pre-commit hook with Husky to check linting (airbnb) & unit-tests before every commit to get good, tested code only in the repo.
+
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

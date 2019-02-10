@@ -12,8 +12,7 @@ import Stats from '../../shared/Stats/Stats';
 
 import * as Styles from './styles';
 
-const renderPlayers = (game) =>
-  game.players.map(player => (
+const renderPlayers = game => game.players.map(player => (
     <Avatar
       key={player.id}
       player={player}
@@ -21,18 +20,17 @@ const renderPlayers = (game) =>
       isActivePlayer={game.activePlayer === player.id}
       onClick={() => game.actions.selectPlayer(player.id)}
     />
-  ));
+));
 
-const Home = () => {
-  return (
+const Home = () => (
     <GameContext.Consumer>{(game) => {
       const activePlayer = getActivePlayer(game);
-      return (
+      return activePlayer ? (
         <Fragment>
-          {game.status === GAME.DOING &&
-            <Redirect
+          {game.status === GAME.DOING
+            && <Redirect
              to={{
-               pathname: "/question",
+               pathname: '/question',
              }}
             />}
           <Styles.Section>
@@ -55,18 +53,19 @@ const Home = () => {
                 <Styles.Heading size={5}>{activePlayer.description || ''}</Styles.Heading>
                 <Styles.Element>
                   <strong>Status:&nbsp;</strong>
-                  {activePlayer.status === GAME.DONE ?
-                    (activePlayer.score < activePlayer.myScore ?
-                    `You have defeated ${activePlayer.name}!` :
-                    `You lost against ${activePlayer.name}. Try again!`) :
-                  `You have not challenged ${activePlayer.name} yet`}
+                  {activePlayer.status === GAME.DONE
+                    ? (activePlayer.score < activePlayer.myScore
+                      ? `You have defeated ${activePlayer.name}!`
+                      : `You lost against ${activePlayer.name}. Try again!`)
+                    : `You have not challenged ${activePlayer.name} yet`}
                 </Styles.Element>
                 <Styles.StatsContainer>
                   <Stats player={activePlayer} />
                 </Styles.StatsContainer>
                 <Button
                   onClick={game.actions.startGame}
-                  disabled={activePlayer.status === GAME.DONE && activePlayer.myScore > activePlayer.score}
+                  disabled={activePlayer.status === GAME.DONE
+                    && activePlayer.myScore > activePlayer.score}
                   >
                   Challenge {activePlayer.name || '?'}
                 </Button>
@@ -74,12 +73,11 @@ const Home = () => {
             </Fragment>
           </Styles.Section>
         </Fragment>
-      )
+      ) : null;
     }
     }</GameContext.Consumer>
 
-  );
-};
+);
 
 export default Home;
 

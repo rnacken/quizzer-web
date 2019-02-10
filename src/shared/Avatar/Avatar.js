@@ -8,7 +8,7 @@ const Avatar = ({ player, isActivePlayer, ...props }) => (
     {...props}
     src={player.src}
     isActivePlayer={isActivePlayer}
-    color={getStatusColor(player)}
+    color={getStatusColor(player) || ''}
   />
 );
 
