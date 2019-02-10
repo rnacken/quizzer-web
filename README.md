@@ -1,3 +1,8 @@
+# Quizzer
+
+This project is a portfolio-showcase for a react project, that uses shared components between the web-version (this repo) and the app-version (built in react-native).
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
