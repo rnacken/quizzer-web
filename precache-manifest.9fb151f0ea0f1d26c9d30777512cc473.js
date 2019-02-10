@@ -4,8 +4,8 @@ self.__precacheManifest = [
     "url": "/quizzer-web/static/js/runtime~main.5fe33d6b.js"
   },
   {
-    "revision": "cea67040c13017026eb4",
-    "url": "/quizzer-web/static/js/main.cea67040.chunk.js"
+    "revision": "1ff025855245e1e7fead",
+    "url": "/quizzer-web/static/js/main.1ff02585.chunk.js"
   },
   {
     "revision": "f8ea40b980154025b91e",
@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "/quizzer-web/static/css/1.6109899d.chunk.css"
   },
   {
-    "revision": "05846b981dfe0980b56795981655241a",
+    "revision": "e26e0279ec7865ccc1f57d7f733f16d7",
     "url": "/quizzer-web/index.html"
   }
 ];

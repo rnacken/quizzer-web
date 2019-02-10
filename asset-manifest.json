@@ -1,6 +1,6 @@
 {
-  "main.js": "/quizzer-web/static/js/main.cea67040.chunk.js",
-  "main.js.map": "/quizzer-web/static/js/main.cea67040.chunk.js.map",
+  "main.js": "/quizzer-web/static/js/main.1ff02585.chunk.js",
+  "main.js.map": "/quizzer-web/static/js/main.1ff02585.chunk.js.map",
   "static/css/1.6109899d.chunk.css": "/quizzer-web/static/css/1.6109899d.chunk.css",
   "static/js/1.f8ea40b9.chunk.js": "/quizzer-web/static/js/1.f8ea40b9.chunk.js",
   "static/js/1.f8ea40b9.chunk.js.map": "/quizzer-web/static/js/1.f8ea40b9.chunk.js.map",
@@ -8,6 +8,6 @@
   "runtime~main.js.map": "/quizzer-web/static/js/runtime~main.5fe33d6b.js.map",
   "static/css/1.6109899d.chunk.css.map": "/quizzer-web/static/css/1.6109899d.chunk.css.map",
   "index.html": "/quizzer-web/index.html",
-  "precache-manifest.68276cf62c6238fdb32793fc3d55f029.js": "/quizzer-web/precache-manifest.68276cf62c6238fdb32793fc3d55f029.js",
+  "precache-manifest.9fb151f0ea0f1d26c9d30777512cc473.js": "/quizzer-web/precache-manifest.9fb151f0ea0f1d26c9d30777512cc473.js",
   "service-worker.js": "/quizzer-web/service-worker.js"
 }
