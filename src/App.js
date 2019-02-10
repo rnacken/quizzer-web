@@ -1,28 +1,49 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Helmet from 'react-helmet'
+import PropTypes from 'prop-types';
+
+import { GameProvider } from './context/GameContext';
+import Header from './shared/Header/Header';
+import Footer from './shared/Footer/Footer';
+import Router from './scenes/Router';
+
+import * as Styles from './styles.js';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <GameProvider>
+        <Helmet
+          title="Quizzer"
+          meta={[
+            { name: 'description', content: 'quizzer is a quiz game' },
+            { name: 'keywords', content: 'quiz, game, react' },
+          ]}
+        />
+        <Header />
+        <Styles.Content>
+          <Router />
+        </Styles.Content>
+        <Footer />
+      </GameProvider>
     );
   }
 }
 
 export default App;
+
+App.defaultProps = {
+  location: {
+    state: {
+      message: null,
+    },
+  },
+};
+
+App.propTypes = {
+  location: PropTypes.shape({
+    state: PropTypes.shape({
+      message: PropTypes.string,
+    }),
+  }),
+};
